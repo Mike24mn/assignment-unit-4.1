@@ -6,6 +6,7 @@ console.log('***** Function Practice *****');
 
 // 1. Function to return 'Hello World!'
 function hello() {
+  console.log("in hello");
   return 'Hello World!';
 }
 
@@ -16,6 +17,7 @@ console.log('Test - should say "Hello World!"', hello());
 // 2. Function to return an personalized hello, using the `name` argument.
 //    for example 'Hello, Jo!', or 'Hello, Stacy!'
 function helloName(name) {
+  console.log("in helloName");
   return "Hello, " + name + "!";
 }
 
@@ -29,6 +31,7 @@ console.log(helloName("Michael"));
 
 // 3. Function to add two numbers together & return the result
 function addNumbers(firstNumber, secondNumber) {
+  console.log("in addNumbers");
   let answer = firstNumber + secondNumber;
   return answer;
   // return firstNumber + secondNumber;
@@ -39,6 +42,7 @@ console.log(addNumbers(11242343, 33234345345345345));
 
 // 4. Function to multiply three numbers & return the result
 function multiplyThree(num1, num2, num3) {
+  console.log("in multiplyThree");
   let answer = num1 * num2 * num3;
   return answer;
 }
@@ -49,6 +53,7 @@ console.log(multiplyThree(12, 23, 555));
 // 5. Function that will return true if a number is positive, 
 //    or greater than zero, and false otherwise
 function isPositive(number) {
+  console.log("in isPositive");
   if (number > 0) {
     return true;
   }
@@ -66,6 +71,7 @@ console.log(isPositive(0));
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
 function getLast(array) {
+  console.log("in getLast");
   if (array.length === 0) {
     return undefined;
   }
@@ -81,8 +87,19 @@ console.log(getLast([]));
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
 function find(value, array) {
+  console.log("in find");
+  let i = 0
+  while (i < array.length) {
+    console.log("in while loop");
+    if (array[i] === value) {
+      return true;
+    }
+    i ++;
+  }
+  return false; 
+  }
 
-}
+console.log(find(1, [ 1,2,3 ]));
 
 // ----------------------
 // Stretch Goals
